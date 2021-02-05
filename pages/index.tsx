@@ -1,213 +1,350 @@
-import Head from 'next/head'
+import {
+    AppBar,
+    Tabs,
+    Tab,
+    makeStyles,
+    Typography,
+    Box,
+    Fab,
+    Menu,
+    MenuItem,
+    Grid,
+    Drawer,
+    InputLabel,
+    Select,
+    FormControl,
+    Button,
+    Chip,
+    Paper,
+} from '@material-ui/core';
+import Head from 'next/head';
+import React, { useState } from 'react';
+import FilterListIcon from '@material-ui/icons/FilterList';
+import Popularity from '../components/Popularity';
 
-export const Home = (): JSX.Element => (
-  <div className="container">
-    <Head>
-      <title>Create Next App</title>
-      <link rel="icon" href="/favicon.ico" />
-    </Head>
+function TabPanel(props) {
+    const { children, value, index, ...other } = props;
 
-    <main>
-      <h1 className="title">
-        Welcome to <a href="https://nextjs.org">Next.js!</a>
-      </h1>
-
-      <p className="description">
-        Get started by editing <code>pages/index.tsx</code>
-      </p>
-
-      <button
-        onClick={() => {
-          window.alert('With typescript and Jest')
-        }}
-      >
-        Test Button
-      </button>
-
-      <div className="grid">
-        <a href="https://nextjs.org/docs" className="card">
-          <h3>Documentation &rarr;</h3>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a href="https://nextjs.org/learn" className="card">
-          <h3>Learn &rarr;</h3>
-          <p>Learn about Next.js in an interactive course with quizzes!</p>
-        </a>
-
-        <a
-          href="https://github.com/vercel/next.js/tree/master/examples"
-          className="card"
+    return (
+        <div
+            role="tabpanel"
+            hidden={value !== index}
+            id={`simple-tabpanel-${index}`}
+            aria-labelledby={`simple-tab-${index}`}
+            {...other}
         >
-          <h3>Examples &rarr;</h3>
-          <p>Discover and deploy boilerplate example Next.js projects.</p>
-        </a>
+            {value === index && (
+                <Box p={3}>
+                    <Typography>{children}</Typography>
+                </Box>
+            )}
+        </div>
+    );
+}
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          className="card"
-        >
-          <h3>Deploy &rarr;</h3>
-          <p>Instantly deploy your Next.js site to a public URL with Vercel.</p>
-        </a>
-      </div>
-    </main>
+function a11yProps(index) {
+    return {
+        id: `simple-tab-${index}`,
+        'aria-controls': `simple-tabpanel-${index}`,
+    };
+}
 
-    <footer>
-      <a
-        href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Powered by <img src="/vercel.svg" alt="Vercel Logo" className="logo" />
-      </a>
-    </footer>
+const useStyles = makeStyles((theme) => ({
+    root: {
+        flexGrow: 1,
+        backgroundColor: theme.palette.background.default,
+        height: '100vh',
+        color: theme.palette.text.primary,
+        padding: theme.spacing(2),
+    },
+    menu: {
+        position: 'fixed',
+        top: 10,
+        left: 10,
+    },
+    tabs: {
+        padding: theme.spacing(1),
+    },
+    chips: {
+        margin: `0 4em`,
+        padding: theme.spacing(1),
+    },
+    chip: {
+        marginRight: theme.spacing(1),
+        minWidth: 80,
+    },
+    drawer: {
+        padding: theme.spacing(2),
+        minWidth: 250,
+    },
+    formControl: {
+        marginBottom: theme.spacing(1),
+        minWidth: '2em',
+    },
+}));
 
-    <style jsx>{`
-      .container {
-        min-height: 100vh;
-        padding: 0 0.5rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-      }
+interface DrawerProps {
+    open: boolean;
+    variant?: 'limitations';
+}
 
-      main {
-        padding: 5rem 0;
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-      }
+interface Filters {
+    language?: string;
+    framework?: string;
+    cost?: string;
+    control?: string;
+}
 
-      footer {
-        width: 100%;
-        height: 100px;
-        border-top: 1px solid #eaeaea;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
+export const Home = (): JSX.Element => {
+    const classes = useStyles();
+    const [value, setValue] = React.useState(0);
+    const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
+    const [drawer, setDrawer] = useState<DrawerProps>({ open: false });
+    const [filters, setfilters] = useState<Filters>({
+        language: 'javascript',
+        framework: 'react',
+        cost: 'free',
+    });
 
-      footer img {
-        margin-left: 0.5rem;
-      }
+    const handleChange = (event, newValue) => {
+        setValue(newValue);
+    };
 
-      footer a {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
+    const handleHover = (event: React.MouseEvent<HTMLButtonElement>) => {
+        setAnchorEl(event.currentTarget);
+    };
 
-      a {
-        color: inherit;
-        text-decoration: none;
-      }
+    const handleClose = () => {
+        setAnchorEl(null);
+    };
 
-      .title a {
-        color: #0070f3;
-        text-decoration: none;
-      }
-
-      .title a:hover,
-      .title a:focus,
-      .title a:active {
-        text-decoration: underline;
-      }
-
-      .title {
-        margin: 0;
-        line-height: 1.15;
-        font-size: 4rem;
-      }
-
-      .title,
-      .description {
-        text-align: center;
-      }
-
-      .description {
-        line-height: 1.5;
-        font-size: 1.5rem;
-      }
-
-      code {
-        background: #fafafa;
-        border-radius: 5px;
-        padding: 0.75rem;
-        font-size: 1.1rem;
-        font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
-          DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
-      }
-
-      .grid {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-wrap: wrap;
-
-        max-width: 800px;
-        margin-top: 3rem;
-      }
-
-      .card {
-        margin: 1rem;
-        flex-basis: 45%;
-        padding: 1.5rem;
-        text-align: left;
-        color: inherit;
-        text-decoration: none;
-        border: 1px solid #eaeaea;
-        border-radius: 10px;
-        transition: color 0.15s ease, border-color 0.15s ease;
-      }
-
-      .card:hover,
-      .card:focus,
-      .card:active {
-        color: #0070f3;
-        border-color: #0070f3;
-      }
-
-      .card h3 {
-        margin: 0 0 1rem 0;
-        font-size: 1.5rem;
-      }
-
-      .card p {
-        margin: 0;
-        font-size: 1.25rem;
-        line-height: 1.5;
-      }
-
-      .logo {
-        height: 1em;
-      }
-
-      @media (max-width: 600px) {
-        .grid {
-          width: 100%;
-          flex-direction: column;
-        }
-      }
-    `}</style>
-
-    <style jsx global>{`
-      html,
-      body {
-        padding: 0;
-        margin: 0;
-        font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-          Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-      }
-
-      * {
-        box-sizing: border-box;
-      }
-    `}</style>
-  </div>
-)
-
-export default Home
+    return (
+        <>
+            <Head>
+                <title>Chart Paralysis</title>
+            </Head>
+            <main className={classes.root}>
+                <Menu
+                    id="simple-menu"
+                    anchorEl={anchorEl}
+                    keepMounted
+                    open={Boolean(anchorEl)}
+                >
+                    <div onMouseLeave={handleClose}>
+                        <MenuItem
+                            onClick={() => {
+                                setDrawer({
+                                    open: true,
+                                    variant: 'limitations',
+                                });
+                                handleClose();
+                            }}
+                        >
+                            Limitations
+                        </MenuItem>
+                        <MenuItem
+                            onClick={() => {
+                                setDrawer({ open: true });
+                                handleClose();
+                            }}
+                        >
+                            Filters
+                        </MenuItem>
+                    </div>
+                </Menu>
+                <Fab
+                    color="primary"
+                    aria-label="Filters"
+                    onMouseEnter={handleHover}
+                    className={classes.menu}
+                >
+                    <FilterListIcon />
+                </Fab>
+                <Paper className={classes.chips}>
+                    {filters.language && (
+                        <Chip
+                            onDelete={() =>
+                                setfilters({ ...filters, language: null })
+                            }
+                            className={classes.chip}
+                            label={filters.language}
+                        ></Chip>
+                    )}
+                    {filters.framework && (
+                        <Chip
+                            onDelete={() =>
+                                setfilters({ ...filters, framework: null })
+                            }
+                            className={classes.chip}
+                            label={filters.framework}
+                        ></Chip>
+                    )}
+                    {filters.cost && (
+                        <Chip
+                            onDelete={() =>
+                                setfilters({ ...filters, cost: null })
+                            }
+                            className={classes.chip}
+                            label={filters.cost}
+                        ></Chip>
+                    )}
+                    {filters.control && (
+                        <Chip
+                            onDelete={() =>
+                                setfilters({ ...filters, control: null })
+                            }
+                            className={classes.chip}
+                            label={filters.control}
+                        ></Chip>
+                    )}
+                </Paper>
+                <Drawer
+                    open={drawer.open}
+                    onClose={() => setDrawer({ open: false })}
+                >
+                    {drawer.variant === 'limitations' && (
+                        <Grid container className={classes.drawer}>
+                            <Grid item xs={12}>
+                                <FormControl
+                                    className={classes.formControl}
+                                    fullWidth
+                                >
+                                    <InputLabel id="language-label">
+                                        Language
+                                    </InputLabel>
+                                    <Select
+                                        labelId="language-label"
+                                        id="language"
+                                        defaultValue="react"
+                                        variant="filled"
+                                    >
+                                        <MenuItem value="javascript">
+                                            JavaScript
+                                        </MenuItem>
+                                        <MenuItem value="python'">
+                                            Python
+                                        </MenuItem>
+                                        <MenuItem value="c#">C#</MenuItem>
+                                        <MenuItem value="java">Java</MenuItem>
+                                    </Select>
+                                </FormControl>
+                            </Grid>
+                            <Grid item xs={12}>
+                                <FormControl
+                                    className={classes.formControl}
+                                    fullWidth
+                                >
+                                    <InputLabel id="framework-label">
+                                        Framework
+                                    </InputLabel>
+                                    <Select
+                                        labelId="framework-label"
+                                        id="framework"
+                                        defaultValue="react"
+                                        variant="filled"
+                                    >
+                                        <MenuItem value="angular">
+                                            Angular
+                                        </MenuItem>
+                                        <MenuItem value="react'">
+                                            React
+                                        </MenuItem>
+                                        <MenuItem value="svelte">
+                                            Svelte
+                                        </MenuItem>
+                                        <MenuItem value="vue">Vue</MenuItem>
+                                    </Select>
+                                </FormControl>
+                            </Grid>
+                            <Grid item xs={12}>
+                                <FormControl
+                                    className={classes.formControl}
+                                    fullWidth
+                                >
+                                    <InputLabel id="costs-label">
+                                        Cost
+                                    </InputLabel>
+                                    <Select
+                                        labelId="costs-label"
+                                        id="costs"
+                                        variant="filled"
+                                    >
+                                        <MenuItem value="free">Free</MenuItem>
+                                        <MenuItem value="paid'">Paid</MenuItem>
+                                    </Select>
+                                </FormControl>
+                            </Grid>
+                            <Grid item xs={12}>
+                                <FormControl
+                                    className={classes.formControl}
+                                    fullWidth
+                                >
+                                    <InputLabel id="control-label">
+                                        Control
+                                    </InputLabel>
+                                    <Select
+                                        labelId="control-label"
+                                        id="control"
+                                        variant="filled"
+                                    >
+                                        <MenuItem value="plugandplay">
+                                            Plug & Play
+                                        </MenuItem>
+                                        <MenuItem value="custom'">
+                                            Custom
+                                        </MenuItem>
+                                    </Select>
+                                </FormControl>
+                            </Grid>
+                            <Grid
+                                item
+                                xs={12}
+                                alignItems="flex-end"
+                                justify="flex-end"
+                                container
+                            >
+                                <Button color="secondary" variant="contained">
+                                    Cancel
+                                </Button>
+                                <Button color="primary" variant="contained">
+                                    Apply
+                                </Button>
+                            </Grid>
+                        </Grid>
+                    )}
+                </Drawer>
+                <Grid container className={classes.tabs}>
+                    <AppBar position="static">
+                        <Tabs
+                            value={value}
+                            onChange={handleChange}
+                            aria-label="simple tabs example"
+                        >
+                            <Tab label="Popularity" {...a11yProps(0)} />
+                            <Tab label="Maintained" {...a11yProps(1)} />
+                            <Tab label="Charts" {...a11yProps(2)} />
+                            <Tab label="Example Code" {...a11yProps(3)} />
+                            <Tab label="Overall" {...a11yProps(4)} />
+                        </Tabs>
+                    </AppBar>
+                    <TabPanel value={value} index={0}>
+                        <Popularity></Popularity>
+                    </TabPanel>
+                    <TabPanel value={value} index={1}>
+                        Maintained
+                    </TabPanel>
+                    <TabPanel value={value} index={2}>
+                        Charts
+                    </TabPanel>
+                    <TabPanel value={value} index={3}>
+                        Example Code
+                    </TabPanel>
+                    <TabPanel value={value} index={4}>
+                        Overall
+                    </TabPanel>
+                </Grid>
+            </main>
+        </>
+    );
+};
+export default Home;
