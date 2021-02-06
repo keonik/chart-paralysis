@@ -1,0 +1,876 @@
+{
+    "react-vis": {
+        "analyzedAt": "2020-09-07T17:05:00.521Z",
+        "collected": {
+            "metadata": {
+                "name": "react-vis",
+                "scope": "unscoped",
+                "version": "1.11.7",
+                "description": "Data visualization library based on React and d3.",
+                "keywords": [
+                    "d3",
+                    "react",
+                    "visualization",
+                    "chart",
+                    "es6",
+                    "babel"
+                ],
+                "date": "2019-04-19T03:52:08.149Z",
+                "author": {
+                    "name": "Visualization Team",
+                    "email": "visualization@uber.com"
+                },
+                "publisher": {
+                    "username": "uber",
+                    "email": "opensource@uber.com"
+                },
+                "maintainers": [
+                    { "username": "uber", "email": "opensource@uber.com" }
+                ],
+                "repository": {
+                    "type": "git",
+                    "url": "git+https://github.com/uber-common/react-vis.git"
+                },
+                "links": {
+                    "npm": "https://www.npmjs.com/package/react-vis",
+                    "homepage": "https://github.com/uber-common/react-vis#readme",
+                    "repository": "https://github.com/uber-common/react-vis",
+                    "bugs": "https://github.com/uber-common/react-vis/issues/new"
+                },
+                "license": "MIT",
+                "dependencies": {
+                    "d3-array": "^1.2.0",
+                    "d3-collection": "^1.0.3",
+                    "d3-color": "^1.0.3",
+                    "d3-contour": "^1.1.0",
+                    "d3-format": "^1.2.0",
+                    "d3-geo": "^1.6.4",
+                    "d3-hexbin": "^0.2.2",
+                    "d3-hierarchy": "^1.1.4",
+                    "d3-interpolate": "^1.1.4",
+                    "d3-sankey": "^0.7.1",
+                    "d3-scale": "^1.0.5",
+                    "d3-shape": "^1.1.0",
+                    "d3-voronoi": "^1.1.2",
+                    "deep-equal": "^1.0.1",
+                    "global": "^4.3.1",
+                    "hoek": "4.2.1",
+                    "prop-types": "^15.5.8",
+                    "react-motion": "^0.5.2"
+                },
+                "devDependencies": {
+                    "babel-cli": "6.18.0",
+                    "babel-eslint": "^7.1.1",
+                    "babel-plugin-module-resolver": "^2.4.0",
+                    "babel-preset-es2015": "6.18.0",
+                    "babel-preset-es2017": "^6.24.1",
+                    "babel-preset-react": "^6.16.0",
+                    "babel-preset-stage-0": "^6.16.0",
+                    "babel-register": "^6.18.0",
+                    "babelify": "^7.3.0",
+                    "browserify": "^14.3.0",
+                    "canvas-prebuilt": "^1.6.11",
+                    "enzyme": "^2.8.2",
+                    "eslint": "^3.19.0",
+                    "eslint-config-prettier": "^3.0.1",
+                    "eslint-config-uber-es2015": "^3.1.2",
+                    "eslint-config-uber-jsx": "^3.3.3",
+                    "eslint-plugin-babel": "^4.1.2",
+                    "eslint-plugin-no-only-tests": "^2.0.1",
+                    "eslint-plugin-prettier": "^2.6.2",
+                    "eslint-plugin-react": "^7.11.1",
+                    "husky": "^1.1.2",
+                    "jsdom": "^9.9.1",
+                    "node-sass": "^4.9.3",
+                    "nyc": "^13.0.1",
+                    "prettier": "^1.14.2",
+                    "react": "^15.5.4",
+                    "react-addons-test-utils": ">=15.4.2",
+                    "react-dom": "^15.5.4",
+                    "react-test-renderer": "^15.5.4",
+                    "stylelint": "^7.7.1",
+                    "stylelint-config-standard": "^15.0.1",
+                    "tape": "^4.6.3",
+                    "uglify-js": "^2.8.22"
+                },
+                "peerDependencies": { "react": "15.3.0 - 16.x" },
+                "releases": [
+                    {
+                        "from": "2020-08-08T00:00:00.000Z",
+                        "to": "2020-09-07T00:00:00.000Z",
+                        "count": 0
+                    },
+                    {
+                        "from": "2020-06-09T00:00:00.000Z",
+                        "to": "2020-09-07T00:00:00.000Z",
+                        "count": 0
+                    },
+                    {
+                        "from": "2020-03-11T00:00:00.000Z",
+                        "to": "2020-09-07T00:00:00.000Z",
+                        "count": 0
+                    },
+                    {
+                        "from": "2019-09-08T00:00:00.000Z",
+                        "to": "2020-09-07T00:00:00.000Z",
+                        "count": 0
+                    },
+                    {
+                        "from": "2018-09-08T00:00:00.000Z",
+                        "to": "2020-09-07T00:00:00.000Z",
+                        "count": 8
+                    }
+                ],
+                "hasTestScript": true,
+                "hasSelectiveFiles": true,
+                "readme": "<p align=\"right\">\n  <a href=\"https://npmjs.org/package/react-vis\">\n    <img src=\"https://img.shields.io/npm/v/react-vis.svg?style=flat-square\" alt=\"version\" />\n  </a>\n  <a href=\"https://travis-ci.org/uber/react-vis\">\n    <img src=\"https://img.shields.io/travis/uber/react-vis/master.svg?style=flat-square\" alt=\"build\" />\n  </a>\n  <a href=\"https://coveralls.io/github/uber/react-vis\">\n    <img src=\"https://img.shields.io/coveralls/uber/react-vis.svg?style=flat-square\" alt=\"build\" />\n  </a>\n  <a href=\"https://npmjs.org/package/react-vis\">\n    <img src=\"https://img.shields.io/npm/dm/react-vis.svg?style=flat-square\" alt=\"downloads\" />\n  </a>\n  <a href=\"http://starveller.sigsev.io/uber/react-vis\">\n    <img src=\"http://starveller.sigsev.io/api/repos/uber/react-vis/badge\" alt=\"stars\" />\n  </a>\n</p>\n\n<h1 align=\"center\">react-vis | <a href=\"http://uber.github.io/react-vis/examples/showcases/axes\">Demos</a> | <a href=\"http://uber.github.io/react-vis/documentation/getting-started/creating-a-new-react-vis-project\">Docs</a></h1>\n\n<h5 align=\"center\">A COMPOSABLE VISUALIZATION SYSTEM</h5>\n\n![demo](docs/assets/react-vis.gif?raw=true)\n\n## Overview\n\nA collection of react components to render common data visualization charts, such as **line/area/bar charts**, **heat maps**, **scatterplots**, **contour plots**, **hexagon heatmaps**, **pie and donut charts**, **sunbursts**, **radar charts**, **parallel coordinates**, and **tree maps**.\n\nSome notable features:\n\n- Simplicity. `react-vis` doesn't require any deep knowledge of data visualization libraries to start building your first visualizations.\n- Flexibility. `react-vis` provides a set of basic building blocks for different charts. For instance, separate X and Y axis components. This provides a high level of control of chart layout for applications that need it.\n- Ease of use. The library provides a set of defaults which can be overridden by the custom user's settings.\n- Integration with React. `react-vis` supports the React's lifecycle and doesn't create unnecessary nodes.\n\n## Usage\n\nInstall react-vis via npm.\n\n    npm install react-vis --save\n\nInclude the built main CSS file in your HTML page or via SASS:\n```sass\n@import \"~react-vis/dist/style\";\n```\n\nYou can also select only the styles you want to use. This helps minimize the size of the outputted CSS. Here's an example of importing only the legends styles:\n```sass\n@import \"~react-vis/dist/styles/legends\";\n```\n\nImport the necessary components from the library...\n\n```jsx\nimport {XYPlot, XAxis, YAxis, HorizontalGridLines, LineSeries} from 'react-vis';\n```\n\n&hellip; and add the following code to your `render` function:\n\n```jsx\n<XYPlot\n  width={300}\n  height={300}>\n  <HorizontalGridLines />\n  <LineSeries\n    data={[\n      {x: 1, y: 10},\n      {x: 2, y: 5},\n      {x: 3, y: 15}\n    ]}/>\n  <XAxis />\n  <YAxis />\n</XYPlot>\n```\n\nIf you're working in a non-node environment, you can also directly include the bundle and compiled style using basic html tags.\n\n```html\n<link rel=\"stylesheet\" href=\"https://unpkg.com/react-vis/dist/style.css\">\n<script type=\"text/javascript\" src=\"https://unpkg.com/react-vis/dist/dist.min.js\"></script>\n```\n\nThe global `reactVis` object will now be available for you to play around.\n\nYou can checkout these example CodePens:\n[#1](https://codepen.io/Apercu/pen/mmLOpY?editors=0010),\n[#2](https://codepen.io/jckr/pen/oWZPJe?editors=0010),\n[#3](https://codepen.io/jckr/pen/BRpReQ?editors=0010) or\n[#4](https://codepen.io/jckr/pen/aWmRGx?editors=0010)\n\n## More information\n\nTake a look at the [folder with examples](showcase/examples/) or check out some docs:\n\n- Common concepts:\n  * [Scales and Data](docs/scales-and-data.md) about how the attributes can be adjusted.\n  * [Animations](docs/animation.md) about how to tweak animations in the library.\n- Components:\n  * [XYPlot](docs/xy-plot.md) about orthogonal charts.\n  * [RadialChart](docs/radial-chart.md) about radial charts.\n  * [Treemap](docs/treemap.md) about making tree maps.\n  * [Sankey](docs/sankey.md) about making sankey diagrams.\n  * [Radar Chart](docs/radar-chart.md) about making radar charts.\n  * [Parallel Coordinates](docs/parallel-coordinates.md) about making parallel coordinate charts.\n  * [Sunbursts](docs/sunburst.md) about making sunburst diagrams.\n  * [Legends](docs/legends.md) about the legends.\n\n## Development\n\nTo develop on this component, install the dependencies and then build and watch the static files:\n\n    npm install && npm run start\n\nOnce complete, you can view the component's example in your browser (will open automatically).\nAny changes you make to the example code will run the compiler to build the files again.\n\nTo lint your code, run the tests, and create code coverage reports:\n\n    npm run full-test\n\n## Requirements\n\nreact-vis makes use of ES6 array methods such as [`Array.prototype.find`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find). If you make use of react-vis, in an environment without these methods, you'll see errors like `TypeError: Server rendering error: Object x,y,radius,angle,color,fill,stroke,opacity,size has no method 'find'`. You can use [`babel-polyfill`](https://babeljs.io/docs/usage/polyfill/) to polyfill these methods."
+            },
+            "npm": {
+                "downloads": [
+                    {
+                        "from": "2020-09-06T00:00:00.000Z",
+                        "to": "2020-09-07T00:00:00.000Z",
+                        "count": 2727
+                    },
+                    {
+                        "from": "2020-08-31T00:00:00.000Z",
+                        "to": "2020-09-07T00:00:00.000Z",
+                        "count": 57238
+                    },
+                    {
+                        "from": "2020-08-08T00:00:00.000Z",
+                        "to": "2020-09-07T00:00:00.000Z",
+                        "count": 230100
+                    },
+                    {
+                        "from": "2020-06-09T00:00:00.000Z",
+                        "to": "2020-09-07T00:00:00.000Z",
+                        "count": 704852
+                    },
+                    {
+                        "from": "2020-03-11T00:00:00.000Z",
+                        "to": "2020-09-07T00:00:00.000Z",
+                        "count": 1444963
+                    },
+                    {
+                        "from": "2019-09-08T00:00:00.000Z",
+                        "to": "2020-09-07T00:00:00.000Z",
+                        "count": 2811618
+                    }
+                ],
+                "dependentsCount": 66,
+                "starsCount": 8
+            },
+            "github": {
+                "homepage": "https://uber.github.io/react-vis",
+                "starsCount": 7371,
+                "forksCount": 774,
+                "subscribersCount": 2074,
+                "issues": {
+                    "count": 1373,
+                    "openCount": 287,
+                    "distribution": {
+                        "3600": 190,
+                        "10800": 87,
+                        "32400": 59,
+                        "97200": 161,
+                        "291600": 117,
+                        "874800": 136,
+                        "2624400": 109,
+                        "7873200": 108,
+                        "23619600": 133,
+                        "70858800": 224,
+                        "212576400": 49
+                    },
+                    "isDisabled": false
+                },
+                "contributors": [
+                    { "username": "bulyonov", "commitsCount": 170 },
+                    { "username": "mcnuttandrew", "commitsCount": 157 },
+                    { "username": "jckr", "commitsCount": 43 },
+                    { "username": "benshope", "commitsCount": 26 },
+                    { "username": "anton-bulyenov", "commitsCount": 22 },
+                    { "username": "chrisirhc", "commitsCount": 17 },
+                    { "username": "Xiot", "commitsCount": 14 },
+                    { "username": "jonsadka", "commitsCount": 14 },
+                    { "username": "CharlieMartell", "commitsCount": 12 },
+                    { "username": "samhogg", "commitsCount": 12 },
+                    { "username": "amilajack", "commitsCount": 11 },
+                    { "username": "lzhuor", "commitsCount": 8 },
+                    { "username": "a-peltier", "commitsCount": 7 },
+                    { "username": "manassra", "commitsCount": 6 },
+                    { "username": "targos", "commitsCount": 6 },
+                    { "username": "mrawdon", "commitsCount": 5 },
+                    { "username": "Wattenberger", "commitsCount": 4 },
+                    { "username": "akindr", "commitsCount": 4 },
+                    { "username": "balthazar", "commitsCount": 4 },
+                    { "username": "dmitry-zaets", "commitsCount": 4 },
+                    { "username": "gsas2", "commitsCount": 4 },
+                    { "username": "sandiiarov", "commitsCount": 4 },
+                    { "username": "skastel", "commitsCount": 4 },
+                    { "username": "sqren", "commitsCount": 4 },
+                    { "username": "zachguo", "commitsCount": 4 },
+                    { "username": "NoobCIT", "commitsCount": 3 },
+                    { "username": "javidhsueh", "commitsCount": 3 },
+                    { "username": "roderickhsiao", "commitsCount": 3 },
+                    { "username": "talc23", "commitsCount": 3 },
+                    { "username": "Domino987", "commitsCount": 2 },
+                    { "username": "alphastorm", "commitsCount": 2 },
+                    { "username": "arkadyan", "commitsCount": 2 },
+                    { "username": "chlumper", "commitsCount": 2 },
+                    { "username": "ibgreen", "commitsCount": 2 },
+                    { "username": "jan-auer", "commitsCount": 2 },
+                    { "username": "keshavnandan", "commitsCount": 2 },
+                    { "username": "markov00", "commitsCount": 2 },
+                    { "username": "rhezab", "commitsCount": 2 },
+                    { "username": "sharynneazhar", "commitsCount": 2 },
+                    { "username": "th0th", "commitsCount": 2 },
+                    { "username": "whitedogg13", "commitsCount": 2 },
+                    { "username": "AmbientLighter", "commitsCount": 1 },
+                    { "username": "DouglasSanders", "commitsCount": 1 },
+                    { "username": "Georg-W", "commitsCount": 1 },
+                    { "username": "Gianfranco97", "commitsCount": 1 },
+                    { "username": "HaNdTriX", "commitsCount": 1 },
+                    { "username": "Haroenv", "commitsCount": 1 },
+                    { "username": "Martin-Nyaga", "commitsCount": 1 },
+                    { "username": "Pessimistress", "commitsCount": 1 },
+                    { "username": "SinZ163", "commitsCount": 1 },
+                    { "username": "ajduberstein", "commitsCount": 1 },
+                    { "username": "aliev", "commitsCount": 1 },
+                    { "username": "andrewrocco", "commitsCount": 1 },
+                    { "username": "angus-c", "commitsCount": 1 },
+                    { "username": "arorayash", "commitsCount": 1 },
+                    { "username": "avin45h", "commitsCount": 1 },
+                    { "username": "bognikol", "commitsCount": 1 },
+                    { "username": "btthomas", "commitsCount": 1 },
+                    { "username": "carsonmcdonald", "commitsCount": 1 },
+                    { "username": "chollier", "commitsCount": 1 },
+                    { "username": "daumann", "commitsCount": 1 },
+                    { "username": "dvnrsn", "commitsCount": 1 },
+                    { "username": "emilyjeppson", "commitsCount": 1 },
+                    { "username": "exlexer", "commitsCount": 1 },
+                    { "username": "foobarbecue", "commitsCount": 1 },
+                    { "username": "gergelyke", "commitsCount": 1 },
+                    { "username": "godd9170", "commitsCount": 1 },
+                    { "username": "granttitus", "commitsCount": 1 },
+                    { "username": "id0Sch", "commitsCount": 1 },
+                    { "username": "jdbence", "commitsCount": 1 },
+                    { "username": "jparklev", "commitsCount": 1 },
+                    { "username": "kanzelm3", "commitsCount": 1 },
+                    { "username": "kkowalczuk", "commitsCount": 1 },
+                    { "username": "lfbayer", "commitsCount": 1 },
+                    { "username": "lhoff", "commitsCount": 1 },
+                    { "username": "loicbourg", "commitsCount": 1 },
+                    { "username": "lukas", "commitsCount": 1 },
+                    { "username": "maxjvh", "commitsCount": 1 },
+                    { "username": "muntact", "commitsCount": 1 },
+                    { "username": "nicolaslopezj", "commitsCount": 1 },
+                    { "username": "noeltock", "commitsCount": 1 },
+                    { "username": "philjestin", "commitsCount": 1 },
+                    { "username": "pmallol", "commitsCount": 1 },
+                    { "username": "richardlewisjones", "commitsCount": 1 },
+                    { "username": "ronsj", "commitsCount": 1 },
+                    { "username": "salzhrani", "commitsCount": 1 },
+                    { "username": "schnerd", "commitsCount": 1 },
+                    { "username": "sergei-zelinsky", "commitsCount": 1 },
+                    { "username": "sradevski", "commitsCount": 1 },
+                    { "username": "stu-harvey", "commitsCount": 1 },
+                    { "username": "sup", "commitsCount": 1 },
+                    { "username": "tayabsoomro", "commitsCount": 1 },
+                    { "username": "tbroadley", "commitsCount": 1 },
+                    { "username": "tijp", "commitsCount": 1 },
+                    { "username": "tjovanovic", "commitsCount": 1 },
+                    { "username": "toddgardner", "commitsCount": 1 },
+                    { "username": "tumetus", "commitsCount": 1 },
+                    { "username": "tux4", "commitsCount": 1 },
+                    { "username": "wangzuo", "commitsCount": 1 }
+                ],
+                "commits": [
+                    {
+                        "from": "2020-08-31T00:00:00.000Z",
+                        "to": "2020-09-07T00:00:00.000Z",
+                        "count": 0
+                    },
+                    {
+                        "from": "2020-08-08T00:00:00.000Z",
+                        "to": "2020-09-07T00:00:00.000Z",
+                        "count": 0
+                    },
+                    {
+                        "from": "2020-06-09T00:00:00.000Z",
+                        "to": "2020-09-07T00:00:00.000Z",
+                        "count": 1
+                    },
+                    {
+                        "from": "2020-03-11T00:00:00.000Z",
+                        "to": "2020-09-07T00:00:00.000Z",
+                        "count": 24
+                    },
+                    {
+                        "from": "2019-09-08T00:00:00.000Z",
+                        "to": "2020-09-07T00:00:00.000Z",
+                        "count": 29
+                    }
+                ],
+                "statuses": [
+                    {
+                        "context": "continuous-integration/travis-ci/push",
+                        "state": "success"
+                    }
+                ]
+            },
+            "source": {
+                "files": {
+                    "readmeSize": 5240,
+                    "testsSize": 170362,
+                    "hasChangelog": true
+                },
+                "badges": [
+                    {
+                        "urls": {
+                            "original": "https://img.shields.io/npm/v/react-vis.svg?style=flat-square",
+                            "shields": "https://img.shields.io/npm/v/react-vis.svg",
+                            "content": "https://img.shields.io/npm/v/react-vis.json"
+                        },
+                        "info": {
+                            "service": "npm",
+                            "type": "version",
+                            "modifiers": { "type": "v" }
+                        }
+                    },
+                    {
+                        "urls": {
+                            "original": "https://img.shields.io/travis/uber/react-vis/master.svg?style=flat-square",
+                            "service": "https://api.travis-ci.org/uber/react-vis.svg?branch=master",
+                            "shields": "https://img.shields.io/travis/uber/react-vis/master.svg",
+                            "content": "https://img.shields.io/travis/uber/react-vis/master.json"
+                        },
+                        "info": {
+                            "service": "travis",
+                            "type": "build",
+                            "modifiers": { "branch": "master" }
+                        }
+                    },
+                    {
+                        "urls": {
+                            "original": "https://img.shields.io/coveralls/uber/react-vis.svg?style=flat-square",
+                            "service": "https://coveralls.io/repos/uber/react-vis/badge.svg",
+                            "shields": "https://img.shields.io/coveralls/uber/react-vis.svg",
+                            "content": "https://img.shields.io/coveralls/uber/react-vis.json"
+                        },
+                        "info": { "service": "coveralls", "type": "coverage" }
+                    },
+                    {
+                        "urls": {
+                            "original": "https://img.shields.io/npm/dm/react-vis.svg?style=flat-square",
+                            "shields": "https://img.shields.io/npm/dm/react-vis.svg",
+                            "content": "https://img.shields.io/npm/dm/react-vis.json"
+                        },
+                        "info": {
+                            "service": "npm",
+                            "type": "downloads",
+                            "modifiers": { "type": "dm" }
+                        }
+                    }
+                ],
+                "linters": ["editorconfig", "eslint", "prettier", "stylelint"],
+                "coverage": 0.84,
+                "outdatedDependencies": {
+                    "d3-sankey": {
+                        "required": "^0.7.1",
+                        "stable": "0.12.3",
+                        "latest": "0.12.3"
+                    },
+                    "deep-equal": {
+                        "required": "^1.0.1",
+                        "stable": "2.0.3",
+                        "latest": "2.0.3"
+                    },
+                    "d3-contour": {
+                        "required": "^1.1.0",
+                        "stable": "2.0.0",
+                        "latest": "2.0.0"
+                    },
+                    "d3-color": {
+                        "required": "^1.0.3",
+                        "stable": "2.0.0",
+                        "latest": "2.0.0"
+                    },
+                    "d3-format": {
+                        "required": "^1.2.0",
+                        "stable": "2.0.0",
+                        "latest": "2.0.0"
+                    },
+                    "d3-array": {
+                        "required": "^1.2.0",
+                        "stable": "2.7.1",
+                        "latest": "2.7.1"
+                    },
+                    "hoek": {
+                        "required": "4.2.1",
+                        "stable": "6.1.3",
+                        "latest": "6.1.3"
+                    },
+                    "d3-interpolate": {
+                        "required": "^1.1.4",
+                        "stable": "2.0.1",
+                        "latest": "2.0.1"
+                    },
+                    "d3-hierarchy": {
+                        "required": "^1.1.4",
+                        "stable": "2.0.0",
+                        "latest": "2.0.0"
+                    },
+                    "d3-shape": {
+                        "required": "^1.1.0",
+                        "stable": "2.0.0",
+                        "latest": "2.0.0"
+                    },
+                    "d3-geo": {
+                        "required": "^1.6.4",
+                        "stable": "2.0.1",
+                        "latest": "2.0.1"
+                    },
+                    "d3-scale": {
+                        "required": "^1.0.5",
+                        "stable": "3.2.2",
+                        "latest": "3.3.0-rc.3"
+                    }
+                }
+            }
+        },
+        "evaluation": {
+            "quality": {
+                "carefulness": 0.9999999999999999,
+                "tests": 0.976,
+                "health": 0.5,
+                "branding": 0.6
+            },
+            "popularity": {
+                "communityInterest": 10326,
+                "downloadsCount": 234950.66666666666,
+                "downloadsAcceleration": 72.86154870624046,
+                "dependentsCount": 66
+            },
+            "maintenance": {
+                "releasesFrequency": 0.09863013698630138,
+                "commitsFrequency": 0.7638356164383562,
+                "openIssues": 0.984947802864773,
+                "issuesDistribution": 0
+            }
+        },
+        "score": {
+            "final": 0.5617628124087934,
+            "detail": {
+                "quality": 0.9359995351046254,
+                "popularity": 0.36884859854887553,
+                "maintenance": 0.4339026925294267
+            }
+        }
+    },
+    "recharts": {
+        "analyzedAt": "2021-01-27T03:08:49.086Z",
+        "collected": {
+            "metadata": {
+                "name": "recharts",
+                "scope": "unscoped",
+                "version": "2.0.4",
+                "description": "React charts",
+                "keywords": ["react", "reactjs", "chart", "react-component"],
+                "date": "2021-01-27T02:59:19.402Z",
+                "author": { "name": "recharts group" },
+                "publisher": {
+                    "username": "xile611",
+                    "email": "327197681@qq.com"
+                },
+                "maintainers": [
+                    {
+                        "username": "arcthur",
+                        "email": "arthurtemptation@gmail.com"
+                    },
+                    { "username": "xile611", "email": "327197681@qq.com" },
+                    {
+                        "username": "evilucifero",
+                        "email": "himayue@hotmail.com"
+                    }
+                ],
+                "repository": {
+                    "type": "git",
+                    "url": "git+https://github.com/recharts/recharts.git"
+                },
+                "links": {
+                    "npm": "https://www.npmjs.com/package/recharts",
+                    "homepage": "https://github.com/recharts/recharts",
+                    "repository": "https://github.com/recharts/recharts",
+                    "bugs": "https://github.com/recharts/recharts/issues"
+                },
+                "license": "MIT",
+                "dependencies": {
+                    "classnames": "^2.2.5",
+                    "d3-interpolate": "^2.0.1",
+                    "d3-scale": "^3.2.3",
+                    "d3-shape": "^2.0.0",
+                    "eventemitter3": "^4.0.1",
+                    "lodash": "^4.17.19",
+                    "react-resize-detector": "^5.2.0",
+                    "react-smooth": "^1.0.6",
+                    "recharts-scale": "^0.4.2",
+                    "reduce-css-calc": "^2.1.7"
+                },
+                "devDependencies": {
+                    "@babel/cli": "^7.6.4",
+                    "@babel/core": "^7.6.4",
+                    "@babel/plugin-proposal-class-properties": "^7.0.0",
+                    "@babel/plugin-proposal-export-default-from": "^7.0.0",
+                    "@babel/plugin-proposal-export-namespace-from": "^7.0.0",
+                    "@babel/plugin-proposal-function-bind": "^7.0.0",
+                    "@babel/plugin-proposal-object-rest-spread": "^7.6.2",
+                    "@babel/plugin-transform-runtime": "^7.6.2",
+                    "@babel/preset-env": "^7.6.3",
+                    "@babel/preset-react": "^7.6.3",
+                    "@babel/preset-typescript": "^7.6.0",
+                    "@babel/runtime": "^7.6.3",
+                    "@types/classnames": "^2.2.9",
+                    "@types/d3-scale": "^3.0.0",
+                    "@types/d3-shape": "^2.0.0",
+                    "@types/lodash": "^4.14.144",
+                    "@types/react": "^16.9.9",
+                    "@types/react-dom": "^16.9.2",
+                    "@types/react-resize-detector": "^5.0.0",
+                    "@types/react-router-dom": "^5.1.7",
+                    "@typescript-eslint/eslint-plugin": "^4.11.0",
+                    "@typescript-eslint/parser": "^4.11.0",
+                    "babel-eslint": "^10.1.0",
+                    "babel-loader": "^8.0.0",
+                    "babel-plugin-istanbul": "^6.0.0",
+                    "babel-plugin-lodash": "^3.3.0",
+                    "babel-preset-airbnb": "^5.0.0",
+                    "chai": "^4.2.0",
+                    "chai-enzyme": "^1.0.0-beta.1",
+                    "cross-env": "^7.0.3",
+                    "d3-scale-chromatic": "^2.0.0",
+                    "enzyme": "^3.10.0",
+                    "enzyme-adapter-react-16": "^1.15.1",
+                    "eslint": "^7.16.0",
+                    "eslint-config-airbnb": "^18.2.1",
+                    "eslint-config-prettier": "^7.1.0",
+                    "eslint-plugin-import": "^2.22.1",
+                    "eslint-plugin-jsx-a11y": "^6.4.1",
+                    "eslint-plugin-prettier": "^3.1.2",
+                    "eslint-plugin-react": "^7.19.0",
+                    "json-loader": "^0.5.7",
+                    "karma": "^5.2.3",
+                    "karma-chai": "^0.1.0",
+                    "karma-chrome-launcher": "^3.1.0",
+                    "karma-coverage": "^2.0.2",
+                    "karma-coveralls": "^2.1.0",
+                    "karma-firefox-launcher": "^2.1.0",
+                    "karma-mocha": "^2.0.1",
+                    "karma-sourcemap-loader": "^0.3.7",
+                    "karma-webpack": "^4.0.0-rc.2",
+                    "mocha": "^8.2.1",
+                    "pre-commit": "^1.1.3",
+                    "prettier": "^2.2.1",
+                    "react": "^16.10.2",
+                    "react-dom": "^16.10.2",
+                    "react-router-dom": "^5.1.2",
+                    "react-test-renderer": "^16.12.0",
+                    "rimraf": "^3.0.2",
+                    "sinon": "^9.2.2",
+                    "ts-loader": "^8.0.12",
+                    "typescript": "^4.1.3",
+                    "webpack": "^4.41.2",
+                    "webpack-bundle-analyzer": "^3.6.0",
+                    "webpack-cli": "^3.3.9",
+                    "webpack-dev-server": "^3.11.0"
+                },
+                "peerDependencies": {
+                    "react": "^16.0.0 || ^17.0.0",
+                    "react-dom": "^16.0.0 || ^17.0.0"
+                },
+                "releases": [
+                    {
+                        "from": "2020-12-28T00:00:00.000Z",
+                        "to": "2021-01-27T00:00:00.000Z",
+                        "count": 4
+                    },
+                    {
+                        "from": "2020-10-29T00:00:00.000Z",
+                        "to": "2021-01-27T00:00:00.000Z",
+                        "count": 5
+                    },
+                    {
+                        "from": "2020-07-31T00:00:00.000Z",
+                        "to": "2021-01-27T00:00:00.000Z",
+                        "count": 6
+                    },
+                    {
+                        "from": "2020-01-28T00:00:00.000Z",
+                        "to": "2021-01-27T00:00:00.000Z",
+                        "count": 11
+                    },
+                    {
+                        "from": "2019-01-28T00:00:00.000Z",
+                        "to": "2021-01-27T00:00:00.000Z",
+                        "count": 27
+                    }
+                ],
+                "hasTestScript": true,
+                "hasSelectiveFiles": true,
+                "readme": "# Recharts\n\n[![Sponsors on Open Collective](https://opencollective.com/recharts/sponsors/badge.svg)](https://opencollective.com/recharts#sponsors)\n[![Backers on Open Collective](https://opencollective.com/recharts/backers/badge.svg)](https://opencollective.com/recharts#backer)\n[![Build Status](https://github.com/recharts/recharts/workflows/Node.js%20CI/badge.svg)](https://github.com/recharts/recharts/actions)\n[![Coverage Status](https://coveralls.io/repos/recharts/recharts/badge.svg?branch=master&service=github)](https://coveralls.io/github/recharts/recharts?branch=master)\n[![npm version](https://badge.fury.io/js/recharts.svg)](http://badge.fury.io/js/recharts)\n[![npm downloads](https://img.shields.io/npm/dm/recharts.svg?style=flat-square)](https://www.npmjs.com/package/recharts)\n[![MIT License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat)](/LICENSE)\n\n## Introduction\n\nRecharts is a **Redefined** chart library built with [React](https://facebook.github.io/react/) and [D3](http://d3js.org).\n\nThe main purpose of this library is to help you to write charts in React applications without any pain. Main principles of Recharts are:\n\n1. **Simply** deploy with React components.\n1. **Native** SVG support, lightweight depending only on some D3 submodules.\n1. **Declarative** components, components of charts are purely presentational.\n\n## Examples\n\n```jsx\n<LineChart\n  width={400}\n  height={400}\n  data={data}\n  margin={{ top: 5, right: 20, left: 10, bottom: 5 }}\n>\n  <XAxis dataKey=\"name\" />\n  <Tooltip />\n  <CartesianGrid stroke=\"#f5f5f5\" />\n  <Line type=\"monotone\" dataKey=\"uv\" stroke=\"#ff7300\" yAxisId={0} />\n  <Line type=\"monotone\" dataKey=\"pv\" stroke=\"#387908\" yAxisId={1} />\n</LineChart>\n```\n\nAll the components of Recharts are clearly separated. The lineChart is composed of x axis, tooltip, grid, and line items, and each of them is an independent React Component. The clear separation and composition of components is one of the principle Recharts follows.\n\n## Installation\n\n### npm\n\nNPM is the easiest and fastest way to get started using Recharts. It is also the recommended installation method when building single-page applications (SPAs). It pairs nicely with a CommonJS module bundler such as Webpack.\n\n\n```sh\n# latest stable\n$ npm install recharts\n```\n\n### umd\n\nThe UMD build is also available on unpkg.com:\n\n```html\n <script src=\"https://unpkg.com/react/umd/react.production.min.js\"></script>\n <script src=\"https://unpkg.com/react-dom/umd/react-dom.production.min.js\"></script>\n <script src=\"https://unpkg.com/recharts/umd/Recharts.min.js\"></script>\n```\n\nThen you can find the library on `window.Recharts`.\n\n### dev build\n\n```sh\n$ git clone https://github.com/recharts/recharts.git\n$ cd recharts\n$ npm install\n$ npm run build\n```\n\n## Demo\n\nTo examine the demos in your local build, execute:\n\n```sh\n$ npm run[-script] demo\n```\n\nand then browse to http://localhost:3000.\n\n## Module Formats\n\n- [babel-plugin-recharts](https://github.com/recharts/babel-plugin-recharts) A simple transform to cherry-pick Recharts modules so you don’t have to.\n\n## Contribution\n\nWe'd love :heart: to hear what you think we should build. Please create an issue to write your usage or ideas.\n\nWe are looking for like-minded people who share the same idea about Recharts. The goal of this project is to create a more flexible charting library for the  React community.\n\n## Backers\n[Become a backer](https://opencollective.com/recharts#backer) and get your image on our README on Github with a link to your site.\n\n<a href=\"https://opencollective.com/recharts/backer/0/website?requireActive=false\" target=\"_blank\"><img src=\"https://opencollective.com/recharts/backer/0/avatar.svg?requireActive=false\"></a>\n<a href=\"https://opencollective.com/recharts/backer/1/website?requireActive=false\" target=\"_blank\"><img src=\"https://opencollective.com/recharts/backer/1/avatar.svg?requireActive=false\"></a>\n<a href=\"https://opencollective.com/recharts/backer/2/website?requireActive=false\" target=\"_blank\"><img src=\"https://opencollective.com/recharts/backer/2/avatar.svg?requireActive=false\"></a>\n<a href=\"https://opencollective.com/recharts/backer/3/website?requireActive=false\" target=\"_blank\"><img src=\"https://opencollective.com/recharts/backer/3/avatar.svg?requireActive=false\"></a>\n<a href=\"https://opencollective.com/recharts/backer/4/website?requireActive=false\" target=\"_blank\"><img src=\"https://opencollective.com/recharts/backer/4/avatar.svg?requireActive=false\"></a>\n<a href=\"https://opencollective.com/recharts/backer/5/website?requireActive=false\" target=\"_blank\"><img src=\"https://opencollective.com/recharts/backer/5/avatar.svg?requireActive=false\"></a>\n\n## Sponsoring\n\nMost of the core team members do this open source work in their free time. If you use recharts for a important work, and you'd like us to invest more time on it, please [donate](https://opencollective.com/recharts#sponsors). Thanks!\n\n## License\n\n[MIT](http://opensource.org/licenses/MIT)\n\nCopyright (c) 2015-2020 Recharts Group."
+            },
+            "npm": {
+                "downloads": [
+                    {
+                        "from": "2021-01-26T00:00:00.000Z",
+                        "to": "2021-01-27T00:00:00.000Z",
+                        "count": 0
+                    },
+                    {
+                        "from": "2021-01-20T00:00:00.000Z",
+                        "to": "2021-01-27T00:00:00.000Z",
+                        "count": 398178
+                    },
+                    {
+                        "from": "2020-12-28T00:00:00.000Z",
+                        "to": "2021-01-27T00:00:00.000Z",
+                        "count": 1745444
+                    },
+                    {
+                        "from": "2020-10-29T00:00:00.000Z",
+                        "to": "2021-01-27T00:00:00.000Z",
+                        "count": 5658458
+                    },
+                    {
+                        "from": "2020-07-31T00:00:00.000Z",
+                        "to": "2021-01-27T00:00:00.000Z",
+                        "count": 11215885
+                    },
+                    {
+                        "from": "2020-01-28T00:00:00.000Z",
+                        "to": "2021-01-27T00:00:00.000Z",
+                        "count": 20582839
+                    }
+                ],
+                "dependentsCount": 342,
+                "starsCount": 25
+            },
+            "github": {
+                "homepage": "http://recharts.org",
+                "starsCount": 15672,
+                "forksCount": 1202,
+                "subscribersCount": 195,
+                "issues": {
+                    "count": 2412,
+                    "openCount": 128,
+                    "distribution": {
+                        "3600": 127,
+                        "10800": 70,
+                        "32400": 75,
+                        "97200": 203,
+                        "291600": 187,
+                        "874800": 293,
+                        "2624400": 314,
+                        "7873200": 266,
+                        "23619600": 247,
+                        "70858800": 454,
+                        "212576400": 176
+                    },
+                    "isDisabled": false
+                },
+                "contributors": [
+                    { "username": "bertho-zero", "commitsCount": 4 },
+                    { "username": "node-kishore", "commitsCount": 2 },
+                    { "username": "dawiwt", "commitsCount": 4 },
+                    { "username": "konstantin24121", "commitsCount": 4 },
+                    { "username": "terenceodonoghue", "commitsCount": 1 },
+                    { "username": "elliottcrif", "commitsCount": 1 },
+                    { "username": "tongyy", "commitsCount": 2 },
+                    { "username": "dlindahl", "commitsCount": 2 },
+                    { "username": "GregoryPotdevin", "commitsCount": 2 },
+                    { "username": "ofk", "commitsCount": 2 },
+                    { "username": "TobyEalden", "commitsCount": 1 },
+                    { "username": "pierroberto", "commitsCount": 1 },
+                    { "username": "G07cha", "commitsCount": 3 },
+                    { "username": "kujon", "commitsCount": 4 },
+                    { "username": "txgruppi", "commitsCount": 3 },
+                    { "username": "jmfrancois", "commitsCount": 1 },
+                    { "username": "mitchconquer", "commitsCount": 1 },
+                    { "username": "paulmelnikow", "commitsCount": 13 },
+                    { "username": "semoal", "commitsCount": 8 },
+                    { "username": "manasovdan", "commitsCount": 2 },
+                    { "username": "harryo", "commitsCount": 1 },
+                    { "username": "adrianriddle", "commitsCount": 2 },
+                    { "username": "manufont", "commitsCount": 3 },
+                    { "username": "IanVS", "commitsCount": 6 },
+                    { "username": "ryanand26", "commitsCount": 4 },
+                    { "username": "juajang", "commitsCount": 5 },
+                    { "username": "hobbeshunter", "commitsCount": 1 },
+                    { "username": "yiwsong", "commitsCount": 4 },
+                    { "username": "texonidas", "commitsCount": 2 },
+                    { "username": "simonhessner", "commitsCount": 5 },
+                    { "username": "viztor", "commitsCount": 2 },
+                    { "username": "JakubSimandl", "commitsCount": 2 },
+                    { "username": "blayhem", "commitsCount": 1 },
+                    { "username": "iuriikozuliak", "commitsCount": 4 },
+                    { "username": "ycanales", "commitsCount": 7 },
+                    { "username": "akram-rameez", "commitsCount": 3 },
+                    { "username": "AnotherCodeArtist", "commitsCount": 1 },
+                    { "username": "arcthur", "commitsCount": 113 },
+                    { "username": "peteruithoven", "commitsCount": 2 },
+                    { "username": "shelbeniskb", "commitsCount": 2 },
+                    { "username": "cornedor", "commitsCount": 1 },
+                    { "username": "iamandrewluca", "commitsCount": 1 },
+                    { "username": "evilucifero", "commitsCount": 28 },
+                    { "username": "jayseeg", "commitsCount": 2 },
+                    { "username": "ahmedelgabri", "commitsCount": 3 },
+                    { "username": "jasonHzq", "commitsCount": 25 },
+                    { "username": "EugeneDraitsev", "commitsCount": 3 },
+                    { "username": "donysukardi", "commitsCount": 2 },
+                    { "username": "stefmolin", "commitsCount": 1 },
+                    { "username": "xile611", "commitsCount": 749 },
+                    { "username": "caub", "commitsCount": 1 },
+                    { "username": "z1ne2wo", "commitsCount": 1 },
+                    { "username": "kamthamc", "commitsCount": 10 },
+                    { "username": "wojtekmaj", "commitsCount": 1 },
+                    { "username": "sainthkh", "commitsCount": 98 },
+                    { "username": "hardikbeladiya", "commitsCount": 1 },
+                    { "username": "cruth544", "commitsCount": 2 },
+                    { "username": "klandell", "commitsCount": 2 },
+                    { "username": "dillonreedy", "commitsCount": 3 },
+                    { "username": "MatanAvneri", "commitsCount": 1 },
+                    { "username": "huei-tan-sociomantic", "commitsCount": 3 },
+                    { "username": "evenchange4", "commitsCount": 2 },
+                    { "username": "jochenberger", "commitsCount": 9 },
+                    { "username": "techniq", "commitsCount": 18 },
+                    { "username": "mbraak", "commitsCount": 1 },
+                    { "username": "MarcoWorms", "commitsCount": 3 },
+                    { "username": "dimitropoulos", "commitsCount": 1 },
+                    { "username": "ashokdelphia", "commitsCount": 1 },
+                    { "username": "Fonger", "commitsCount": 2 },
+                    { "username": "remojansen", "commitsCount": 7 },
+                    { "username": "huxiaoyun", "commitsCount": 32 },
+                    { "username": "wyozi", "commitsCount": 1 },
+                    { "username": "m2mathew", "commitsCount": 1 },
+                    { "username": "ivorbosloper", "commitsCount": 1 },
+                    { "username": "billneff79", "commitsCount": 19 },
+                    { "username": "mika-go-13", "commitsCount": 3 },
+                    { "username": "amaechler", "commitsCount": 1 },
+                    { "username": "Semigradsky", "commitsCount": 1 },
+                    { "username": "kwolfy", "commitsCount": 3 },
+                    { "username": "rafipiccolo", "commitsCount": 1 },
+                    { "username": "ShenTom", "commitsCount": 2 },
+                    { "username": "Philipp91", "commitsCount": 4 },
+                    { "username": "puemos", "commitsCount": 4 },
+                    { "username": "avindra", "commitsCount": 18 },
+                    { "username": "jasonslyvia", "commitsCount": 2 },
+                    { "username": "jashanbhullar", "commitsCount": 1 },
+                    { "username": "truenorthcreative", "commitsCount": 4 },
+                    { "username": "supersteves", "commitsCount": 8 },
+                    { "username": "timgates42", "commitsCount": 1 },
+                    { "username": "MarcusNotheis", "commitsCount": 1 },
+                    { "username": "AlexGilleran", "commitsCount": 2 },
+                    { "username": "khmm12", "commitsCount": 2 },
+                    { "username": "Morantron", "commitsCount": 2 },
+                    { "username": "alitas", "commitsCount": 3 },
+                    { "username": "H3RSKO", "commitsCount": 1 },
+                    { "username": "Tennen", "commitsCount": 2 },
+                    { "username": "arranfw", "commitsCount": 1 },
+                    { "username": "nickpalmer", "commitsCount": 3 },
+                    { "username": "dmfilipenko", "commitsCount": 1 }
+                ],
+                "commits": [
+                    {
+                        "from": "2021-01-20T00:00:00.000Z",
+                        "to": "2021-01-27T00:00:00.000Z",
+                        "count": 2
+                    },
+                    {
+                        "from": "2020-12-28T00:00:00.000Z",
+                        "to": "2021-01-27T00:00:00.000Z",
+                        "count": 25
+                    },
+                    {
+                        "from": "2020-10-29T00:00:00.000Z",
+                        "to": "2021-01-27T00:00:00.000Z",
+                        "count": 71
+                    },
+                    {
+                        "from": "2020-07-31T00:00:00.000Z",
+                        "to": "2021-01-27T00:00:00.000Z",
+                        "count": 82
+                    },
+                    {
+                        "from": "2020-01-28T00:00:00.000Z",
+                        "to": "2021-01-27T00:00:00.000Z",
+                        "count": 160
+                    }
+                ]
+            },
+            "source": {
+                "files": {
+                    "readmeSize": 5024,
+                    "testsSize": 206050,
+                    "hasChangelog": true
+                },
+                "badges": [
+                    {
+                        "urls": {
+                            "original": "https://coveralls.io/repos/recharts/recharts/badge.svg?branch=master&service=github",
+                            "service": "https://coveralls.io/repos/github/recharts/recharts/badge.svg?branch=master",
+                            "shields": "https://img.shields.io/coveralls/recharts/recharts/master.svg",
+                            "content": "https://img.shields.io/coveralls/recharts/recharts/master.json"
+                        },
+                        "info": {
+                            "service": "coveralls",
+                            "type": "coverage",
+                            "modifiers": { "branch": "master" }
+                        }
+                    },
+                    {
+                        "urls": {
+                            "original": "https://img.shields.io/npm/dm/recharts.svg?style=flat-square",
+                            "shields": "https://img.shields.io/npm/dm/recharts.svg",
+                            "content": "https://img.shields.io/npm/dm/recharts.json"
+                        },
+                        "info": {
+                            "service": "npm",
+                            "type": "downloads",
+                            "modifiers": { "type": "dm" }
+                        }
+                    }
+                ],
+                "linters": ["editorconfig", "eslint", "prettier"],
+                "coverage": 0.93
+            }
+        },
+        "evaluation": {
+            "quality": {
+                "carefulness": 0.9999999999999999,
+                "tests": 0.7395,
+                "health": 1,
+                "branding": 0.3
+            },
+            "popularity": {
+                "communityInterest": 17193,
+                "downloadsCount": 1886152.6666666667,
+                "downloadsAcceleration": 1927.3148592085217,
+                "dependentsCount": 342
+            },
+            "maintenance": {
+                "releasesFrequency": 1,
+                "commitsFrequency": 1,
+                "openIssues": 1,
+                "issuesDistribution": 0
+            }
+        },
+        "score": {
+            "final": 0.7038614170167222,
+            "detail": {
+                "quality": 0.960228854113826,
+                "popularity": 0.5213126498549748,
+                "maintenance": 0.6666666666666666
+            }
+        }
+    }
+}
